@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<heml lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Journal Entries</title>
+    </head>
+    <body>
+        <hearder>
+            <h1>Journal Entries</h1>
+            <nav>
+                <ul>
+                    <li>April 5, 2021</li>
+                    <li>April 6, 2021</li>
+                    <li>April 7, 2021</li>
+                </ul>
+            </nav>
+        </hearder>
+        
+        <footer>
+            <p> Author: Menghe Li<br>
+            <a href="mailto:mengheli@example.com">mengheli@example.com</a></p>
+        </footer>
+        <!-- Day 1-->
+        <section class="day1">
+            <h2>April 5, 2021</h2>
+            <hr>
+            <img src ="https://static.thenounproject.com/png/136470-200.png"/>
+            <p>Today, my famil and I have just retruned home form LA, and I have to say that driving
+                is really tiring. But <br>all of this has passed. We bought lots of fun things from LA,
+                the most interesting of which is a <br><b>Chinese puzzle lock</b>. This is a lock tha can only
+                be unlocked in one posture. It took me nearly an hour to unlock it,<br> and this is only
+                the most basic. I like this kind of stuff very much, and I hope I can buy more
+                difficult ones when i go to LA again.
+            </p>
+            <img src="https://sc02.alicdn.com/kf/HTB1SRYuav2H8KJjy0Fcq6yDlFXat/222060411/HTB1SRYuav2H8KJjy0Fcq6yDlFXat.jpg_.webp" width="200" height="200"/>
+            <h3>To Do List</h3>
+            <ul>
+                <li>Finishing Homework</li>
+                <li>Cut trees</li>
+                <li>clean bathroom</li>
+            </ul>
+        </section>
+
+        <!-- Day 2-->
+        <main>
+            <h2>April 6, 2021</h2>
+            <hr>
+            <div>Today is a very bad day for me because we have a 
+                <strong><i>Internet outage </i></strong>. <br>For most peole in present day
+                <a>WI-FI</a> is a basic need for <em>survival</em>.<br>
+                I always play this sound when I want to <span style="color:blue;font-weight:bold">sleep</span>
+            </div>
+            <audio controls>
+                <source src="https://www.fesliyanstudios.com/play-mp3/7647" type="audio/mpeg">
+            </audio>
+
+            <h3>To Do List</h3>
+            <ol>
+                <li><span style="color:red;font-weight:bold">Fix the Internet</span></li>
+                <li>Shopping</li>
+                <li>Video games</li>
+            </ol>
+        </main>
+        
+        <!--Day 3-->
+        <section name="day3">
+            <h2>April 7, 2021</h2>
+            <hr>
+            <details>
+                <summary>I have a <span style="color:red;font-weight:bold">secret message</span> for you</summary>
+                <p style="font-size:50px">&#128540; <br>
+                Secret is a seret, why do I need to tell you
+                </p>
+            </details>
+            <p>Today is not very interesting. Is just</p>
+            <ul>
+                <li>Lecture</li>
+                <li>Homework</li>
+                <li>More homework</li>
+                <li>More lecture</li>
+                <li>I made an appointment for COVID vaccine</li>
+            </ul>
+            <h3>To Do List</h3>
+            <ol>
+                <li>CSE 110 LAB</li>
+                <li>Lecture</li>
+                <li>Discussion</li>
+                <li>Group work</li>
+            </ol>
+            <p>Here is an funny video I found today</p>
+            <video width="500" controls>
+                <source src="./mymp4.mp4">
+            </video>
+        </section>
+
+        <hr>
+        <!--Add New Entry-->
+        <section>
+            <h2>Add New Entry</h2>
+            <form action="" method="POST">
+                <div>
+                    <label for="date">Enter date: </label>
+                    <input type="date" date="date" id="date" required>
+                </div>
+
+                <br>
+                <label for="date">Selet a date:</label>
+                <input list="mydate" id="date" name="date"/>
+                <datalist id="mydate">
+                    <option value="April 5,2021">
+                    <option value="April 6,2021">
+                    <option value="April 7,2021">
+                </datalist>
+
+                <br>
+                <label for="story">Text your story:</label><br>
+                <textarea id="story" name="story" rows="5" cols="33">
+                Please tell us about your day ...
+                </textarea>
+
+                <br>
+                <p>Choose you Food:</p>
+                <div>
+                    <input type="checkbox" id="food" name="food">
+                    <label for="food">White Rice</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="food" name="food">
+                    <label for="food">Black Rice</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="food" name="food">
+                    <label for="food">Brown Rice</label>
+                </div>
+                  
+
+                <br>
+                <fieldset>
+                    <legend>Upload video or audio</legend>
+                    
+                    <label for="URL">Enter your URL: </label>
+                    <input type="text" name="URL" id="URL"><br>
+
+                    <input type="radio" id="video" name="p/v/a" >
+                    <label for="video">Video</label><br/>
+                
+                    <input type="radio" id="audio" name="p/v/a" >
+                    <label for="audio">Audio</label><br/>
+
+                    <input type="radio" id="none" name="p/v/a" >
+                    <label for="none">None</label>
+                </fieldset>
+
+                <br>
+                <label for="p/v/a">Choose what to upload:</label>
+                <select name="p/v/a" id="p/v/a">
+                    <option value="">--Please choose an option--</option>
+                    <option value="nothing">None</option>
+                    <option value="picture">Picture</option>
+                    <option value="video">Video</option>
+                    <option value="audio">Audio</option>
+                </select>
+
+                <br>
+                <div>
+                    <button value="submitted" type="button"> Upload</button>
+                </div>
+            </form>
+        </section>
+
+    </body>
+
+</heml>
