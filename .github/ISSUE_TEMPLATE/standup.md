@@ -1,9 +1,9 @@
 ---
 name: standup
-about: Problems on Standup Notes
+about: Daily report
 title: ''
 labels: ''
-assignees: ''
+assignees: Jacky1278
 
 ---
 
