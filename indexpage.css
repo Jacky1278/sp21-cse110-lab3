@@ -1,0 +1,88 @@
+/* Change back group color to Black and
+   font color to white
+*/
+*{
+    background-color: black;
+    color: white;
+}
+/*Set all date to green*/
+h2{
+    color:#0f0;
+    height: auto;
+    width:fit-content;
+    
+}
+/*Put the date in to a list*/
+.list-date {
+    list-style-type:none ;
+    margin: 0;
+    padding: 3mm;
+    border:1px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+.list-date li{
+    border-width: 1px;
+    border-style: solid;
+    border-color:#0f0;
+    border-radius: 1pt;
+    margin: 0.5em;
+    padding:0.5rem;
+    position: static;
+}
+
+a[target]{
+    color: blue;
+}
+a:hover{
+    color:hotpink;
+}
+a:active{
+    color:red;
+}
+h1,h2,h3 {
+    font-family: "myfont";
+    position:relative;
+}
+
+
+
+/* Make every story have a picture and text next to it*/
+.story{
+    display: flex;
+}
+/*Make TODO in yellow */
+div + h3{
+    color: yellow;
+}
+h3 ~ ul{
+    border: 1px solid yellow;
+    margin-top:20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    max-width: fit-content;
+    min-width: none;
+}
+h3 ~ ol{
+    border: 1px solid yellow;
+    margin: 10px 20px 20px 20px;
+}
+ul li{
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-right: 7px;
+}
+#today-do p{
+    display: block;
+    padding:5px 6px 7px 8px;
+}
+#day2 div>p{
+    font-size: 20px;
+}
+#day1-story>p {
+    font-size: 1.7vw;
+}
+
