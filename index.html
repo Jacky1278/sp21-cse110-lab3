@@ -3,39 +3,65 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="indexpage.css">
         <title>Journal Entries</title>
     </head>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 250px 250px;
+            grid-auto-rows: minmax(20px,auto);
+            grid-gap: 20px;
+        }
+        .enter-date{
+            grid-column: span 2;
+        }
+
+        @media screen and (max-width:1000px){
+            *{
+                background-color: lightcoral;
+            }
+        }
+        @font-face{
+            font-family: "myfont";
+            src: url(./ZenDots-Regular.ttf);
+        }
+    </style>
 
     <body>       
         <header>
-            <h1>Journal Entries</h1>
-            <nav>
-                <ul>
-                    <li>April 5, 2021</li>
-                    <li>April 6, 2021</li>
-                    <li>April 7, 2021</li>
-                </ul>
-            </nav>
+            <h1 id="Journal Entries"
+                style="color:rgb(255,0,0); text-align:center;">
+                Journal Entries
+            </h1>
+            <!-- Dates -->
+            <ul class="list-date">
+                <li>April 5, 2021</li>
+                <li>April 6, 2021</li>
+                <li>April 7, 2021</li>
+           </ul>
         </header>
-        <footer>
+        <footer style="text-decoration: underline;">
             <p> Author: Menghe Li<br>
-            <a href="mailto:mengheli@example.com">mengheli@example.com</a></p>
+            <a href="#" target="_blank">mengheli@example.com</a></p>
         </footer>
-        <!-- Day 1-->
-        <section class="day1">
-            <h2>April 5, 2021</h2>
+
+        <!-- Day 1, April 5, 2021-->
+        <section class="day1" name="each-date">
+            <h2 id="day1">April 5, 2021</h2>
             <hr>
-            <img src ="https://static.thenounproject.com/png/136470-200.png" alt="LA symbol"/>
-            <p>Today, my famil and I have just retruned home form LA, and I have to say that driving
-                is really tiring. But <br>all of this has passed. We bought lots of fun things from LA,
-                the most interesting of which is a <br><b>Chinese puzzle lock</b>. This is a lock tha can only
-                be unlocked in one posture. It took me nearly an hour to unlock it,<br> and this is only
-                the most basic. I like this kind of stuff very much, and I hope I can buy more
-                difficult ones when i go to LA again.
-            </p>
-            <img src="https://sc02.alicdn.com/kf/HTB1SRYuav2H8KJjy0Fcq6yDlFXat/222060411/HTB1SRYuav2H8KJjy0Fcq6yDlFXat.jpg_.webp" width="200" height="200"
-             alt="The Chinese box"/>
-            <h3>To Do List</h3>
+            <div class="story" id="day1-story">
+                <img src="https://sc02.alicdn.com/kf/HTB1SRYuav2H8KJjy0Fcq6yDlFXat/222060411/HTB1SRYuav2H8KJjy0Fcq6yDlFXat.jpg_.webp" width="200" height="200"
+                alt="The Chinese box"/>
+                <p>Today, my famil and I have just retruned home form LA, and I have to say that driving
+                    is really tiring. But <br>all of this has passed. We bought lots of fun things from LA,
+                    the most interesting of which is a <br><b>Chinese puzzle lock</b>. This is a lock tha can only
+                    be unlocked in one posture. It took me nearly an hour to unlock it,<br> and this is only
+                    the most basic. I like this kind of stuff very much, and I hope I can buy more
+                    difficult ones when i go to LA again.
+                </p>
+            </div>
+            <h3 class="todo">To Do List</h3>
             <ul>
                 <li>Finishing Homework</li>
                 <li>Cut trees</li>
@@ -43,30 +69,30 @@
             </ul>
         </section>
 
-                
-        <!-- Day 2-->
-        <main>
+        <!-- Day 2, April 6, 2021-->
+        <section id="day2">
             <h2>April 6, 2021</h2>
             <hr>
-            <div>Today is a very bad day for me because we have a 
-                <strong><i>Internet outage </i></strong>. <br>For most peole in present day
-                <a>WI-FI</a> is a basic need for <em>survival</em>.<br>
-                I always play this sound when I want to <span style="color:blue;font-weight:bold">sleep</span>
-            </div>
-            <audio controls>
+            <audio controls style="margin:auto">
                 <source src="https://www.fesliyanstudios.com/play-mp3/7647" type="audio/mpeg">
             </audio>
-
+            <div>
+                <p>Today is a very bad day for me because we have a 
+                    <strong><i>Internet outage </i></strong>. <br>For most peole in present day
+                    <a>WI-FI</a> is a basic need for <em>survival</em>.<br>
+                    I always play this sound when I want to <span style="color:blue;font-weight:bold">sleep</span>
+                </p>
+            </div>
             <h3>To Do List</h3>
-            <ol>
+            <ul>
                 <li><span style="color:red;font-weight:bold">Fix the Internet</span></li>
                 <li>Shopping</li>
                 <li>Video games</li>
-            </ol>
-        </main>
-        
-        <!--Day 3-->
-        <section>
+            </ul>
+        </section>
+
+        <!-- Day 3, April 7, 2021-->
+        <section id="day3">
             <h2>April 7, 2021</h2>
             <hr>
             <details>
@@ -76,85 +102,41 @@
                 </p>
             </details>
             <p>Today is not very interesting. Is just</p>
+            <div id="today-do">
+                <p>Lecture</p>
+                <p>Homework</p>
+                <p>More homework</p>
+                <p>More lecture</p>
+                <p>I made an appointment for COVID vaccine</p>
+            </div>
+            <h3 style="color: yellow;">To Do List</h3>
             <ul>
-                <li>Lecture</li>
-                <li>Homework</li>
-                <li>More homework</li>
-                <li>More lecture</li>
-                <li>I made an appointment for COVID vaccine</li>
-            </ul>
-            <h3>To Do List</h3>
-            <ol>
                 <li>CSE 110 LAB</li>
                 <li>Lecture</li>
                 <li>Discussion</li>
                 <li>Group work</li>
-            </ol>
+            </ul>
             <p>Here is an funny video I found today</p>
             <video width="500" controls>
-                <source src="./mymp4.mp4">
+                <source src="./videos/mymp4.mp4">
             </video>
         </section>
 
+        <!--Add entry-->
+        <h2>Add New Entry</h2>
         <hr>
-        <!--Add New Entry-->
-        <section>
-            <h2>Add New Entry</h2>
-            <form>
-                <div>
-                    <label for="date">Enter date: </label>
-                    <input type="date" id="date" required>
-                </div>
-
-                <br>
-                <label for="date">Selet a date:</label>
-                <input list="mydate" name="date"/>
-                <datalist id="mydate">
-                    <option value="April 5,2021">
-                    <option value="April 6,2021">
-                    <option value="April 7,2021">
-                </datalist>
-
-                <br>
+        <form class="grid-container">
+            <div class="enter-date">
+                <label for="date">Enter date: </label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="enter-story">
                 <label for="story">Text your story:</label><br>
-                <textarea id="story" name="story" rows="5" cols="33">
+                <textarea id="story" name="story" rows="5" cols="25">
                 Please tell us about your day ...
                 </textarea>
-
-                <br>
-                <p>Choose you Food:</p>
-                <div>
-                    <input type="checkbox" name="food">
-                    <label >White Rice</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="food">
-                    <label >Black Rice</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="food">
-                    <label>Brown Rice</label>
-                </div>
-                  
-
-                <br>
-                <fieldset>
-                    <legend>Upload video or audio</legend>
-                    
-                    <label for="URL">Enter your URL: </label>
-                    <input type="text" name="URL" id="URL"><br>
-
-                    <input type="radio" id="video" name="p/v/a" >
-                    <label for="video">Video</label><br/>
-                
-                    <input type="radio" id="audio" name="p/v/a" >
-                    <label for="audio">Audio</label><br/>
-
-                    <input type="radio" id="none" name="p/v/a" >
-                    <label for="none">None</label>
-                </fieldset>
-
-                <br>
+            </div>
+            <div class="upload-something">
                 <label for="p/v/a">Choose what to upload:</label>
                 <select name="p/v/a" id="p/v/a">
                     <option value="">--Please choose an option--</option>
@@ -163,12 +145,14 @@
                     <option value="video">Video</option>
                     <option value="audio">Audio</option>
                 </select>
-
                 <br>
-                <div>
-                    <button value="submitted" type="button"> Upload</button>
-                </div>
-            </form>
-        </section>
+                <label for="URL">Enter your URL: </label>
+                <input type="text" name="URL" id="URL"><br>
+            </div>
+            <div>
+                <button value="submitted" type="button"> Upload</button>
+            </div>
+
+        </form>
     </body>
 </html>
