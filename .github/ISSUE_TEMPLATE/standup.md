@@ -17,6 +17,11 @@ The first day of Lab3
 **Problem:**:
 1. Want to start a new html page
 
+## April 18, 2021
+Finished Lab3
+
+Nothing going worng just  need to do some search on **CSS**
+
   
 
 
